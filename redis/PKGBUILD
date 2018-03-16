@@ -11,9 +11,9 @@ depends=()
 makedepends=("patch" "mingw-w64-x86_64-jemalloc" "mingw-w64-x86_64-lua51")
 options=()
 source=("https://github.com/antirez/${pkgname}/archive/${pkgver}.tar.gz"
-		'hiredis_Makefile.patch')
+        'hiredis_Makefile.patch')
 sha256sums=('19aeb3baadc6fd952aeeca3673a9f163b9a9193df9801a49d82f590d17cd90d7'
-			'48e6f1a8bb4debba5bfa6afec88ccd02f6c1d30b751cf1b2b0cc92a906e3d40c')
+            '48e6f1a8bb4debba5bfa6afec88ccd02f6c1d30b751cf1b2b0cc92a906e3d40c')
 
 prepare() {
   cd "${srcdir}/${pkgname}-${pkgver}/deps/hiredis"
