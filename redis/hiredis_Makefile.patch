@@ -1,0 +1,11 @@
+--- Makefile
++++ Makefile
+@@ -153,7 +153,7 @@ check: hiredis-test
+ 	kill `cat /tmp/hiredis-test-redis.pid`
+ 
+ .c.o:
+-	$(CC) -std=c99 -pedantic -c $(REAL_CFLAGS) $<
++	$(CC) -std=gnu99 -pedantic -c $(REAL_CFLAGS) $<
+ 
+ clean:
+ 	rm -rf $(DYLIBNAME) $(STLIBNAME) $(TESTS) $(PKGCONFNAME) examples/hiredis-example* *.o *.gcda *.gcno *.gcov
