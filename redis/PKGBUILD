@@ -31,4 +31,5 @@ package() {
   
   mkdir -p "${pkgdir}/etc/"
   install -m644 "${srcdir}/${pkgname}-${pkgver}"/redis.conf "${pkgdir}/etc/"
+  install -m644 "${srcdir}/${pkgname}-${pkgver}"/sentinel.conf "${pkgdir}/etc/"
 }
