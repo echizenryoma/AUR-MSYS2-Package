@@ -26,10 +26,10 @@ build() {
 }
 
 package() {
-  mkdir -p "${pkgdir}/usr/bin/"
-  install -m755 "${srcdir}/${pkgname}-${pkgver}"/src/*.exe "${pkgdir}/usr/bin/"
+  cd "${srcdir}/${pkgname}-${pkgver}"  
+  PREFIX=${pkgdir}/usr make install
   
-  mkdir -p "${pkgdir}/etc/"
+  mkdir -p "${pkgdir}/etc"
   install -m644 "${srcdir}/${pkgname}-${pkgver}"/redis.conf "${pkgdir}/etc/"
   install -m644 "${srcdir}/${pkgname}-${pkgver}"/sentinel.conf "${pkgdir}/etc/"
 }
