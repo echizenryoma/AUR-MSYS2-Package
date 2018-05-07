@@ -37,6 +37,7 @@ sha512sums=('c61668d4999d43ccd5ed8e99bd2f6992190503bb3c4103a22871e346feb8cbd049b
 _common_flags=(
   --with-compat
   --with-debug
+  --with-cc-opt=-DFD_SETSIZE=1024
   --with-http_addition_module
   --with-http_auth_request_module
   --with-http_dav_module
